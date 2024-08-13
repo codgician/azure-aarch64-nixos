@@ -18,6 +18,16 @@
         modules = [ ./configuration.nix ];
         system = "aarch64-linux";
       };
+
+      azure-x86-legacy = nixpkgs.lib.nixosSystem {
+        modules = [ ./configuration-legacy.nix ];
+        system = "x86_64-linux";
+      };
+
+      azure-aarch64-legacy = nixpkgs.lib.nixosSystem {
+        modules = [ ./configuration-legacy.nix ];
+        system = "aarch64-linux";
+      };
     };
   };
 }

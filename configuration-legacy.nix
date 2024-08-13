@@ -1,4 +1,4 @@
-# NixOS configuration for Azure Gen 2 VM
+# NixOS configuration for Azure Gen 1 VM
 
 { config, lib, pkgs, modulesPath, ... }: {
   imports = [
@@ -16,7 +16,7 @@
   # Azure image
   virtualisation.azureImage = {
     diskSize = 8 * 1024;
-    vmGeneration = "v2";
+    vmGeneration = "v1";
   };
 
   # Azure specific configurations
@@ -28,10 +28,6 @@
   };
 
   services.cloud-init.network.enable = true;
-
-  # Use the systemd-boot EFI boot loader
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
 
   # Use networkd
   networking.useNetworkd = true;
