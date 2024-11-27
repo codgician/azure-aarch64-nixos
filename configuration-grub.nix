@@ -18,7 +18,7 @@
 
   # Global packages
   environment.systemPackages = with pkgs; [
-    fastfetch pciutils
+    fastfetch pciutils git htop
   ];
 
   # Users
