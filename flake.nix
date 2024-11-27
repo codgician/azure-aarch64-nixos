@@ -25,7 +25,7 @@
       };
 
       azure-aarch64-grub = nixpkgs.lib.nixosSystem {
-        modules = [ ./configuration.nix ];
+        modules = [ ./configuration-grub.nix ];
         system = "aarch64-linux";
       };
 
