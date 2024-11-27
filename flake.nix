@@ -38,16 +38,6 @@
         modules = [ ./configuration-legacy.nix ];
         system = "aarch64-linux";
       };
-
-      azure-x86-xfs = nixpkgs.lib.nixosSystem {
-        modules = [ ./configuration-xfs.nix ];
-        system = "x86_64-linux";
-      };
-
-      azure-aarch64-xfs = nixpkgs.lib.nixosSystem {
-        modules = [ ./configuration-xfs.nix ];
-        system = "aarch64-linux";
-      };
     };
   };
 }
