@@ -65,3 +65,6 @@ jobs:
       - name: Build Azure Image
         run: |
           nix build .#nixosConfigurations.${{ matrix.host.name }}.config.system.build.azureImage
+      - name: Build System Profile
+        run: |
+          nix build .#nixosConfigurations.${{ matrix.host.name }}.config.system.build.toplevel
