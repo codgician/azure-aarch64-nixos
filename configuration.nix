@@ -1,34 +1,15 @@
-# NixOS configuration for Azure Gen 2 VM
+# NixOS configuration for Azure Gen 2 VM using systemd-boot
 
-{ config, lib, pkgs, modulesPath, ... }: {
+{ pkgs, modulesPath, ... }: {
   imports = [
-    (modulesPath + "/virtualisation/azure-common.nix")
     (modulesPath + "/virtualisation/azure-image.nix")
   ];
 
-  boot.growPartition = true;
-
-  fileSystems."/boot" = {
-    device = "/dev/disk/by-label/ESP";
-    fsType = "vfat";
-  };
-
   # Azure image
-  virtualisation.azureImage = {
-    diskSize = 8 * 1024;
-    vmGeneration = "v2";
-  };
-
-  # Azure specific configurations
+  virtualisation.diskSize = 8 * 1024;
+  virtualisation.azureImage.vmGeneration = "v2";
   virtualisation.azure.acceleratedNetworking = true;
-  virtualisation.azure.agent.enable = true;
-  services.cloud-init.enable = true;
-  systemd.services.cloud-config.serviceConfig = {
-    Restart = "on-failure";
-  };
-
-  services.cloud-init.network.enable = true;
-
+  
   # Use the systemd-boot EFI boot loader
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -67,5 +48,5 @@
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "24.05"; # Did you read the comment?
+  system.stateVersion = "24.11"; # Did you read the comment?
 }

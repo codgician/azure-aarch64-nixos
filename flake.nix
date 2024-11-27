@@ -19,6 +19,16 @@
         system = "aarch64-linux";
       };
 
+      zure-x86-grub = nixpkgs.lib.nixosSystem {
+        modules = [ ./configuration-grub.nix ];
+        system = "x86_64-linux";
+      };
+
+      azure-aarch64-grub = nixpkgs.lib.nixosSystem {
+        modules = [ ./configuration-grub.nix ];
+        system = "aarch64-linux";
+      };
+
       azure-x86-legacy = nixpkgs.lib.nixosSystem {
         modules = [ ./configuration-legacy.nix ];
         system = "x86_64-linux";

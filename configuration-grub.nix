@@ -1,4 +1,4 @@
-# NixOS configuration for Azure Gen 1 VM
+# NixOS configuration for Azure Gen 2 VM using grub
 
 { pkgs, modulesPath, ... }: {
   imports = [
@@ -7,9 +7,9 @@
 
   # Azure image
   virtualisation.diskSize = 8 * 1024;
-  virtualisation.azureImage.vmGeneration = "v1";
+  virtualisation.azureImage.vmGeneration = "v2";
   virtualisation.azure.acceleratedNetworking = true;
-
+  
   # Use networkd
   networking.useNetworkd = true;
 
@@ -44,5 +44,5 @@
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "24.05"; # Did you read the comment?
+  system.stateVersion = "24.11"; # Did you read the comment?
 }
