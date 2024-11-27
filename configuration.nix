@@ -5,6 +5,9 @@
     (modulesPath + "/virtualisation/azure-image.nix")
   ];
 
+  # Enable flakes
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
   # Azure image
   virtualisation.diskSize = 8 * 1024;
   virtualisation.azureImage.vmGeneration = "v2";
