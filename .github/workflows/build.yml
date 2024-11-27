@@ -63,6 +63,6 @@ jobs:
             builders-use-substitutes = true
             max-jobs = auto
             extra-platforms = ${{ matrix.host.system == 'aarch64-linux' && 'aarch64-linux' || 'i686-linux' }}
-      - name: Build
+      - name: Build Azure Image
         run: |
-          nix build .#nixosConfigurations.${{ matrix.host.name }}.config.system.build.toplevel
+          nix build .#nixosConfigurations.${{ matrix.host.name }}.config.system.build.azureImage
