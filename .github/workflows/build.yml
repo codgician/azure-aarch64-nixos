@@ -58,7 +58,6 @@ jobs:
           nix_path: 'nixpkgs=https://github.com/NixOS/nixpkgs/archive/refs/heads/nixos-unstable.tar.gz'
           extra_nix_config: |
             accept-flake-config = true
-            system-features = big-parallel
             experimental-features = nix-command flakes
             builders-use-substitutes = true
             max-jobs = auto
