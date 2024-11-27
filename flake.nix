@@ -6,7 +6,7 @@
     flake-utils.url = "github:numtide/flake-utils";
   };
 
-  outputs = { self, nixpkgs, ... }: {
+  outputs = { nixpkgs, ... }: {
     # NixOS configurations
     nixosConfigurations = {
       azure-x86 = nixpkgs.lib.nixosSystem {
@@ -19,13 +19,13 @@
         system = "aarch64-linux";
       };
 
-      zure-x86-grub = nixpkgs.lib.nixosSystem {
+      azure-x86-grub = nixpkgs.lib.nixosSystem {
         modules = [ ./configuration-grub.nix ];
         system = "x86_64-linux";
       };
 
       azure-aarch64-grub = nixpkgs.lib.nixosSystem {
-        modules = [ ./configuration-grub.nix ];
+        modules = [ ./configuration.nix ];
         system = "aarch64-linux";
       };
 
@@ -36,6 +36,16 @@
 
       azure-aarch64-legacy = nixpkgs.lib.nixosSystem {
         modules = [ ./configuration-legacy.nix ];
+        system = "aarch64-linux";
+      };
+
+      azure-x86-xfs = nixpkgs.lib.nixosSystem {
+        modules = [ ./configuration-xfs.nix ];
+        system = "x86_64-linux";
+      };
+
+      azure-aarch64-xfs = nixpkgs.lib.nixosSystem {
+        modules = [ ./configuration-xfs.nix ];
         system = "aarch64-linux";
       };
     };

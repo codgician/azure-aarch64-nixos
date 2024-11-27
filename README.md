@@ -12,10 +12,14 @@ Following changes are made in the proposed PR:
 
 This flake contains NixOS configuration for both x86_64 and aarch64 on Azure:
 
-* azure-aarch64: Gen 2 VM for aarch64
-* azure-x86: Gen 2 VM for x86_64
+* azure-aarch64: Gen 2 VM for aarch64, using systemd-boot
+* azure-x86: Gen 2 VM for x86_64, using systemd-boot
 * azure-aarch64-legacy: Gen 1 VM for aarch64
 * azure-x86-legacy: Gen 1 VM for x86_64
+* azure-aarch64-grub: Gen 2 VM for aarch64, using grub
+* azure-x86-legacy: Gen 2 VM for x86_64, using grub
+* azure-aarch64-xfs: Gen 2 VM for aarch64, using systemd-boot and XFS root partition
+* azure-x86-xfs: Gen 2 VM for x86_64, using systemd-boot and XFS root partition
 
 To generate VHD for aarch64 Gen 2 VM:
 
