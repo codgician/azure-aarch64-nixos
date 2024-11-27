@@ -5,11 +5,11 @@
         "systems": "systems"
       },
       "locked": {
-        "lastModified": 1710146030,
-        "narHash": "sha256-SZ5L6eA7HJ/nmkzGG7/ISclqe6oZdOZTNoesiInkXPQ=",
+        "lastModified": 1731533236,
+        "narHash": "sha256-l0KFg5HjrsfsO/JpG+r7fRrqm12kzFHyUHqHCVpMMbI=",
         "owner": "numtide",
         "repo": "flake-utils",
-        "rev": "b1d9ab70662946ef0850d488da1c9019f3a9752a",
+        "rev": "11707dc2f618dd54ca8739b309ec4fc024de578b",
         "type": "github"
       },
       "original": {
@@ -20,16 +20,16 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1723604578,
-        "narHash": "sha256-1ZT/+tx5nx5ADNc6IBdHmb2RSIwHlJzFkOPoNWsO7Mc=",
+        "lastModified": 1732645704,
+        "narHash": "sha256-ctfrC/JwW76CeX7IBLKfOr3QB0Q6ZWZtBYQW0I+YVv8=",
         "owner": "codgician",
         "repo": "nixpkgs",
-        "rev": "94683f9e55d47996b7403791863143f7afad8a51",
+        "rev": "932e6a7adfcb18a2aaa2ae574dd11dcd5f5128b7",
         "type": "github"
       },
       "original": {
         "owner": "codgician",
-        "ref": "azure",
+        "ref": "fix-azure-modules",
         "repo": "nixpkgs",
         "type": "github"
       }

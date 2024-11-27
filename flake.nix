@@ -2,11 +2,11 @@
   description = "azure-aarch64-nixos";
 
   inputs = {
-    nixpkgs.url = "github:codgician/nixpkgs/azure";
+    nixpkgs.url = "github:codgician/nixpkgs/fix-azure-modules";
     flake-utils.url = "github:numtide/flake-utils";
   };
 
-  outputs = inputs @ { self, nixpkgs, ... }: {
+  outputs = { self, nixpkgs, ... }: {
     # NixOS configurations
     nixosConfigurations = {
       azure-x86 = nixpkgs.lib.nixosSystem {
