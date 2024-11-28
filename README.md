@@ -10,7 +10,7 @@ This flake contains NixOS configuration for both x86_64 and aarch64 on Azure:
 
 * azure-aarch64: Gen 2 VM for aarch64, using systemd-boot
 * azure-x86: Gen 2 VM for x86_64, using systemd-boot
-* azure-aarch64-legacy: Gen 1 VM for aarch64
+* azure-aarch64-legacy: Gen 1 VM for aarch64 **(not officially supported by Azure)**
 * azure-x86-legacy: Gen 1 VM for x86_64
 * azure-aarch64-grub: Gen 2 VM for aarch64, using grub
 * azure-x86-grub: Gen 2 VM for x86_64, using grub
