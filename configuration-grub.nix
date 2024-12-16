@@ -5,6 +5,9 @@
     (modulesPath + "/virtualisation/azure-image.nix")
   ];
 
+  # Set image filename
+  image.fileName = "disk.vhd";
+
   # Enable flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
