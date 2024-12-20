@@ -1,6 +1,6 @@
 # NixOS on Azure aarch64 
 
-[![build](https://github.com/codgician/azure-aarch64-nixos/actions/workflows/build.yml/badge.svg)](https://github.com/codgician/azure-aarch64-nixos/actions/workflows/build.yml)
+[![built with garnix](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fgarnix.io%2Fapi%2Fbadges%2Fcodgician%2Fazure-aarch64-nixos%3Fbranch%3Dmain)](https://garnix.io/repo/codgician/azure-aarch64-nixos)
 
 This is a test flake for NixOS on Azure for [nixos/nixpkgs: PR #359365](https://github.com/NixOS/nixpkgs/pull/359365).
 
