@@ -2,4 +2,4 @@ builds:
   branch: main
   include:
     - nixosConfigurations.*
-    - nixosConfigurations.*.config.system.build.azureImage
+    - packages.*
