@@ -1,6 +1,14 @@
 {
   description = "azure-aarch64-nixos";
 
+  nixConfig = {
+    allow-import-from-derivation = "true";
+    extra-substituters = [ "https://cache.garnix.io" ];
+    extra-trusted-public-keys = [
+      "cache.garnix.io:CTFPyKSLcx5RMJKfLo5EEPUObbA78b0YQ2DTCJXqr9g="
+    ];
+  };
+
   inputs = {
     nixpkgs.url = "github:codgician/nixpkgs/fix-azure-modules";
     flake-utils.url = "github:numtide/flake-utils";

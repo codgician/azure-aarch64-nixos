@@ -18,7 +18,7 @@ This flake contains NixOS configuration for both x86_64 and aarch64 on Azure:
 To generate VHD for aarch64 Gen 2 VM (on aarch64 machine):
 
 ```bash
-nix build .#azure-aarch64
+nix build --accept-flake-config .#azure-aarch64 
 ```
 
 ... and the resulting vhd could be found under: `./result/disk.vhd`.
